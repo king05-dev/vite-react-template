@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="url(#gradient)"/>
+  
+  <!-- Wave pattern -->
+  <path d="M0 350C85.3 330 170.7 330 256 350C341.3 370 426.7 370 512 350V512H0V350Z" fill="rgba(255,255,255,0.1)"/>
+  <path d="M0 380C85.3 360 170.7 360 256 380C341.3 400 426.7 400 512 380V512H0V380Z" fill="rgba(255,255,255,0.05)"/>
+  
+  <!-- Ship icon -->
+  <g transform="translate(156, 180)">
+    <!-- Hull -->
+    <path d="M20 80L180 80C190 80 200 90 200 100L200 120C200 130 190 140 180 140L20 140C10 140 0 130 0 120L0 100C0 90 10 80 20 80Z" fill="white"/>
+    
+    <!-- Mast -->
+    <rect x="95" y="20" width="10" height="80" fill="white"/>
+    
+    <!-- Sail -->
+    <path d="M105 25L105 75L160 60L160 40L105 25Z" fill="rgba(255,255,255,0.9)"/>
+    
+    <!-- Flag -->
+    <path d="M105 25L105 40L140 35L105 25Z" fill="#ff6b6b"/>
+  </g>
+  
+  <!-- App name -->
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="white">MarineHub</text>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,397 @@
+.dashboard-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header-section {
+  margin-bottom: 32px;
+}
+
+.dashboard-header-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.dashboard-header-section p {
+  color: #718096;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card.blue .stat-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card.green .stat-icon {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.stat-card.orange .stat-icon {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+
+.stat-card.purple .stat-icon {
+  background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.stat-title {
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #f7fafc;
+}
+
+/* Activities List */
+.activities-list {
+  padding: 0;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  font-size: 1.2rem;
+  padding: 8px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-message {
+  color: #2d3748;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.activity-time {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+/* Quick Actions */
+.quick-actions {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.action-btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.action-btn.secondary {
+  background: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.action-btn.secondary:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.action-icon {
+  font-size: 1.1rem;
+}
+
+/* Weather Widget */
+.weather-widget {
+  padding: 24px;
+}
+
+.weather-current {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.weather-desc {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.weather-detail:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* System Status */
+.system-status {
+  padding: 24px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.status-item:last-child {
+  border-bottom: none;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-indicator.online {
+  background-color: #48bb78;
+}
+
+.status-indicator.warning {
+  background-color: #ed8936;
+}
+
+.status-indicator.offline {
+  background-color: #e53e3e;
+}
+
+.status-item span:nth-child(2) {
+  flex: 1;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.online {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.status-badge.warning {
+  background-color: #fbd38d;
+  color: #c05621;
+}
+
+.status-badge.offline {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    padding: 12px;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .dashboard-header-section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-header {
+    padding: 16px 20px;
+  }
+  
+  .activity-item {
+    padding: 12px 20px;
+  }
+  
+  .quick-actions {
+    padding: 20px;
+  }
+  
+  .weather-widget {
+    padding: 20px;
+  }
+  
+  .system-status {
+    padding: 20px;
+  }
+}

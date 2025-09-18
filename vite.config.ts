@@ -4,4 +4,15 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
   plugins: [react(), cloudflare()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          supabase: ['@supabase/supabase-js']
+        }
+      }
+    }
+  }
 });

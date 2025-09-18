@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create PWA Icons</title>
+</head>
+<body>
+    <canvas id="canvas192" width="192" height="192" style="border: 1px solid black;"></canvas>
+    <canvas id="canvas512" width="512" height="512" style="border: 1px solid black;"></canvas>
+    
+    <script>
+        // Create 192x192 icon
+        const canvas192 = document.getElementById('canvas192');
+        const ctx192 = canvas192.getContext('2d');
+        
+        // Background gradient
+        const gradient192 = ctx192.createLinearGradient(0, 0, 192, 192);
+        gradient192.addColorStop(0, '#667eea');
+        gradient192.addColorStop(1, '#764ba2');
+        
+        // Draw background with rounded corners
+        ctx192.fillStyle = gradient192;
+        ctx192.roundRect(0, 0, 192, 192, 24);
+        ctx192.fill();
+        
+        // Draw ship icon
+        ctx192.fillStyle = 'white';
+        ctx192.fillRect(48, 120, 96, 24); // Hull
+        ctx192.fillRect(94, 80, 4, 40);   // Mast
+        
+        // Draw text
+        ctx192.fillStyle = 'white';
+        ctx192.font = 'bold 16px Arial';
+        ctx192.textAlign = 'center';
+        ctx192.fillText('MarineHub', 96, 170);
+        
+        // Create 512x512 icon
+        const canvas512 = document.getElementById('canvas512');
+        const ctx512 = canvas512.getContext('2d');
+        
+        // Background gradient
+        const gradient512 = ctx512.createLinearGradient(0, 0, 512, 512);
+        gradient512.addColorStop(0, '#667eea');
+        gradient512.addColorStop(1, '#764ba2');
+        
+        // Draw background with rounded corners
+        ctx512.fillStyle = gradient512;
+        ctx512.roundRect(0, 0, 512, 512, 64);
+        ctx512.fill();
+        
+        // Draw ship icon (scaled up)
+        ctx512.fillStyle = 'white';
+        ctx512.fillRect(128, 320, 256, 64); // Hull
+        ctx512.fillRect(252, 216, 8, 104);  // Mast
+        
+        // Draw text
+        ctx512.fillStyle = 'white';
+        ctx512.font = 'bold 42px Arial';
+        ctx512.textAlign = 'center';
+        ctx512.fillText('MarineHub', 256, 450);
+        
+        // Download function
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Add download buttons
+        setTimeout(() => {
+            const btn192 = document.createElement('button');
+            btn192.textContent = 'Download 192x192';
+            btn192.onclick = () => downloadCanvas(canvas192, 'pwa-192x192.png');
+            document.body.appendChild(btn192);
+            
+            const btn512 = document.createElement('button');
+            btn512.textContent = 'Download 512x512';
+            btn512.onclick = () => downloadCanvas(canvas512, 'pwa-512x512.png');
+            document.body.appendChild(btn512);
+        }, 100);
+    </script>
+</body>
+</html>
